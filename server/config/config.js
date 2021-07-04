@@ -1,7 +1,7 @@
 const config ={
     production: {
-        SECRET: process.env.SECRET,
-        DATABASE: process.env.MONGODB_URL,
+        SECRET: "supersecret",
+        DATABASE: "mongodb+srv://bookshelf:<book_shelf123>@cluster0.6uqoj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
 
     },
     default: {
@@ -13,3 +13,4 @@ const config ={
 exports.get = function get(env){
     return config[env] || config.default
 }
+
