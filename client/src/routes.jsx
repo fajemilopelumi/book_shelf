@@ -24,7 +24,7 @@ export default function Routes() {
         <Route path="/user/logout" exact component={Auth(Logout,true)} />
         <Route path="/user/user-reviews" exact component={Auth(UserPosts)} />
         <Route path="/user/add" exact component={Auth(AddBook,true)} />
-        <Route path="/user/register" exact component={Register} />
+        <Route path="/user/register" exact component={Auth(Register,true)} />
         <Route path="/user/edit-post/:id" exact component={Auth(EditReview,null)} />
         <Route path="/books/:id" exact component={Auth(BookView,null)} />
         
