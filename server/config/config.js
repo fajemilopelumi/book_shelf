@@ -1,7 +1,7 @@
 const config ={
     production: {
         SECRET: "supersecret",
-        DATABASE: "mongodb+srv://bookshelf:<book_shelf123>@cluster0.6uqoj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+        DATABASE: "mongodb+srv://bookshelf:<book_shelf123>@cluster0.6uqoj.mongodb.net/bookshelf?retryWrites=true&w=majority",
 
     },
     default: {
