@@ -6,7 +6,7 @@ const config ={
     },
     default: {
         SECRET: 'SUPERSECRETPASSWORD123',
-        DATABASE: 'mongodb://localhost:27017/booksShelf',
+        DATABASE: 'mongodb+srv://bookshelf:book_shelf123@cluster0.6uqoj.mongodb.net/?retryWrites=true&w=majority',
     }
 }
 

@@ -6,7 +6,7 @@ const config = require('./server/config/config').get(process.env.NODE_ENV)
 const app = express();
 
 
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise; 
 mongoose.connect(config.DATABASE);
 
 const { User } = require('./server/models/users')
@@ -16,7 +16,7 @@ const {auth} = require('./server/middleware/auth')
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-app.use(express.static('client/build'))
+app.use(express.static('client/build'))  
 
 //GET
 
@@ -36,7 +36,7 @@ app.get('/api/logout',auth,(req,res)=>{
         res.sendStatus(200)
     })
 } )
-
+ 
 app.get('/api/getBook',(req,res)=>{
     let id = req.query.id;
 
@@ -162,13 +162,13 @@ app.get('/api/users', (req,res)=>{
 if(process.env.NODE_ENV === 'production'){
     const path = require('path');
     app.get('/*',(req,res)=>{
-        res.sendfile(path.resolve(__dirname,'./client','build','index.html'))
+        res.sendFile(path.resolve(__dirname,'./client','build','index.html'))
     })
     
 }
 
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3001; 
 app.listen(port, ()=>{
     console.log("Server running")
 })
